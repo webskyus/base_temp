@@ -1,0 +1,105 @@
+// Base fonts
+$icon-pack:        'icon-pack',        Arial,  sans-serif
+$proximanova-r:    'proximanova-r',    Arial,  sans-serif
+$proximanova-b:    'proximanova-b',    Arial,  sans-serif
+
+
+// Base colors
+$base-black:          #494949
+$base-white:          #e3d5ff
+$base-grey:           #7c7c7c
+$base-font:           #826ba9
+$base-pink:           #f33c7a
+$base-blue:           #66d4f4
+$base-purple:         rgb(87, 11, 106)
+$bg-color:            #1b0c30
+$bg-body:             #311a4f
+
+
+// Base mixin
+=proximanova-r
+  font-family: $proximanova-r
+  font-weight: 400
+=icon-pack
+  font-family: $icon-pack
+  font-weight: normal
+=proximanova-b
+  font-family: $proximanova-b
+  font-weight: 700
+
+
+
+// calc px to em
+$context: 16px
+@function em($pixels, $context: 16px)
+  @return #{$pixels/$context}em
+
+  
+// general btn
+=general-btn
+	display: inline-block
+	padding: em(14px) em(31px)
+	+proximanova-b
+	font-size: em(18px)
+	color: $base-white
+	text-transform: uppercase
+	background: $base-pink
+	transition: all 0.35s linear
+	&:hover
+		background: darken($base-pink, 15%)
+
+
+// background setting's
+=bg-setting
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+
+
+
+// Main setting's
+::placeholder
+	color: #666
+
+::selection
+	background-color: $base-pink
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $proximanova-r
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+ul,li,h1,h2,h3,h4,h5,h6,p
+  margin: 0
+  padding: 0
+
+li
+  list-style-type: none
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none	
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+    

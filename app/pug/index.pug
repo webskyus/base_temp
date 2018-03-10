@@ -1,0 +1,46 @@
+doctype html
+html
+  
+  head
+    meta(charset="utf-8")
+    title New template v1.3
+    meta(content="" name="webskyus")
+    meta(content="" name="this is description")
+    meta(content="" name="website, landing")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    link(rel="icon", href="./images/main/favicon/favicon.ico")    
+    link(rel="apple-touch-icon", href="./images/main/favicon/apple-icon-180x180.png" size="180x180")    
+      
+  body
+    header.header 
+      .container
+        .row-center
+          h1 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun        
+          h1 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun        
+        .row-center
+          h2 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun        
+          h2 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun        
+        .row-center
+          h3 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun        
+        .row-center
+          h4 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun         
+        .row-center
+          h5 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun       
+        .row-center
+          h6 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun 
+          h6 Lorem ipsun lorem ipsun lorem ipsun lorem ipsun lorem ipsun 
+        br  
+        .row-center
+          mixin icon(name,mod)
+            - mod = mod || ''
+              svg(class="icon icon-" + name + ' ' + mod)
+                use(xlink:href="./images/sprite/sprite.svg#" + name)
+          +icon('github','red_mod')           
+          +icon('facebook','red_mod')           
+          +icon('youtube','red_mod')           
+                    
+                                  
+       
+    link(rel='stylesheet' href='style/main.css')
+    script(src='js/scripts.min.js' defer)
